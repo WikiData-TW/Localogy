@@ -1,2 +1,2 @@
 # WikidataLocalogy.github.io
-[地方學首頁](http://wikidata.localogy.intellicvorg.nctu.me/wiki_localogy/index.html)
+[維基數據地方學專題聚會網站首頁](http://wikidata.localogy.intellicvorg.nctu.me/wiki_localogy/index.html)
