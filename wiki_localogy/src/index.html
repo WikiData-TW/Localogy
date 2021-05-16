@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta property="og:title" content="地方學 - Wikidata Taiwan｜維基數據臺灣" />
+    <meta property="og:description"
+        content="臺灣維基數據社群（亦可稱為 Wikidata 臺灣社群、Wikidata Taiwan）是臺灣地區主要推動Wikidata專案編輯與相關事務的地方社群，目前主要活動地點為北台灣地區（包含臺北市、新北市、桃園市與基隆市），主要活動為每月定期社群聚會，同時也會至其他單位進行Wikidata介紹與協作編輯。" />
+    <meta property="og:url" content="https://localogy.wikidata.org.tw" />
+    <meta property="og:image" content="https://wikidata.org.tw/images/og.jpg" />
+    <meta property="og:type" content="article" type="image/x-icon">
+    <meta property="og:site_name" content="地方學 - Wikidata Taiwan｜維基數據臺灣" />
+    <title>地方學 - Wikidata Taiwan｜維基數據臺灣</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MCDHN96');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170889734-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-170889734-2');
+    </script>
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/rwd.css">
+    <script src="src/js/framework/jquery.js"></script>
+    <script src="src/js/framework/vue.js"></script>
+    <script src="src/js/view/app.js"></script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCDHN96" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="app">
+        <header>
+            <div class="banner">
+                <h1 v-html="title"></h1>
+                <article>
+                    <p v-html="slogan1"></p>
+                    <p v-html="slogan2"></p>
+                    <div class="logo">
+                        <img :src="finger" alt="scroll" class="logo" onclick="scrolldown();">
+                    </div>
+                </article>
+            </div>
+        </header>
+        <div class="team" id="team">
+            <aside>
+                <div class="wikidata">
+                    <img :src="wikidata" alt="wikidata" :style="wikidataStyle" @click="goWikidata">
+                </div>
+                <article>
+                    {{intro}}
+                </article>
+            </aside>
+            <div class="member">
+                <h1>
+                    {{community}}
+                </h1>
+                <div class="card" id="newtaipei">
+                    <p>{{newtaipei}}</p>
+                </div>
+                <div class="card" id="taichung">
+                    <p>{{taichung}}</p>
+                </div>
+                <div class="card" id="join">
+                    <p><a :href="fb">{{join}}</a></p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>copyright &copy; 2020 維基數據地方學</p>
+        </footer>
+    </div>
+
+    <noscript>
+        <div style="z-index: 1000;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        margin-left: -8px;
+        font-size: 20pt;">
+            <p>本頁面需要瀏覽器啟用JavaScript!</p>
+            <p>頁面重導向中...</p>
+            <p>如不會自行跳轉，請點選下方連結</p>
+            <a href="noscript.html">無js簡易版網站</a>
+        </div>
+        <meta http-equiv="refresh" content="0; url=noscript.html">
+    </noscript>
+
+    <script>
+        function scrolldown() {
+            $('html,body').animate({
+                scrollTop: $('#team').offset().top
+            }, 1200);
+        }
+        app.$mount('#app');
+    </script>
+</body>
+
+</html>
